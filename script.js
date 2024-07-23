@@ -64,10 +64,12 @@ d3.json("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/mas
         // append axes
         svg.append("g")
             .attr("transform", `translate(0, ${height - margin.bottom})`)
-            .call(xAxis);
+            .call(xAxis)
+            .attr("id", "x-axis");
         svg.append("g")
             .attr("transform", `translate(${margin.left}, 0)`)
-            .call(yAxis);
+            .call(yAxis)
+            .attr("id", "y-axis");
 
         // define colors
         const defaultColor = "steelblue";
